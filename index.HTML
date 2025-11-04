@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JSON Files Hub</title>
+<title>Репозиторий JSON</title>
 <style>
 body{margin:0;font-family:system-ui,Arial,sans-serif;background:#0f0f0f;color:#e0e0e0;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh}
 h1{font-weight:600;letter-spacing:1px;margin-bottom:0.5em}
@@ -12,29 +12,14 @@ a{color:#79c0ff;text-decoration:none;border-bottom:1px solid transparent;transit
 a:hover{border-bottom:1px solid #79c0ff}
 .container{padding:2em;text-align:center;border:1px solid #2a2a2a;border-radius:12px;background:#141414;box-shadow:0 0 20px rgba(0,0,0,0.4)}
 footer{margin-top:2em;font-size:0.8em;opacity:0.6}
-pre{background:#1a1a1a;padding:1em;border-radius:8px;overflow-x:auto;text-align:left;max-width:600px;margin-top:1em}
-input[type=file]{margin-top:1em;padding:0.5em;background:#222;color:#ddd;border:1px solid #333;border-radius:6px;cursor:pointer}
 </style>
 </head>
 <body>
 <div class="container">
 <h1>JSON Files Hub</h1>
-<p>Загрузи .json файл, чтобы просмотреть его содержимое прямо здесь.</p>
-<input type="file" id="fileInput" accept=".json">
-<pre id="output">Здесь появится содержимое...</pre>
+<p>Здесь хранятся мои .json файлы. Простое и чистое место без лишнего шума.</p>
+<p><a href="data/example.json" target="_blank">example.json</a></p>
 </div>
 <footer>© 2025 РобоТТ</footer>
-<script>
-document.getElementById('fileInput').addEventListener('change',function(e){
-const file=e.target.files[0]
-if(!file)return
-const reader=new FileReader()
-reader.onload=function(){try{
-const json=JSON.parse(reader.result)
-document.getElementById('output').textContent=JSON.stringify(json,null,2)
-}catch{document.getElementById('output').textContent='Ошибка: неверный JSON'}}
-reader.readAsText(file)
-})
-</script>
 </body>
 </html>
