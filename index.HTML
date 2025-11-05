@@ -1,25 +1,110 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Репозиторий JSON</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Поддержать проект</title>
+<link rel="icon" href="https://wot-lom.com/wp-content/uploads/2025/02/icons8-check.gif">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:system-ui,Arial,sans-serif;background:#0f0f0f;color:#e0e0e0;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh}
-h1{font-weight:600;letter-spacing:1px;margin-bottom:0.5em}
-p{max-width:500px;text-align:center;opacity:0.8}
-a{color:#79c0ff;text-decoration:none;border-bottom:1px solid transparent;transition:0.2s}
-a:hover{border-bottom:1px solid #79c0ff}
-.container{padding:2em;text-align:center;border:1px solid #2a2a2a;border-radius:12px;background:#141414;box-shadow:0 0 20px rgba(0,0,0,0.4)}
-footer{margin-top:2em;font-size:0.8em;opacity:0.6}
+:root{--accent:#ffd000;--glass:rgba(0,0,0,0.45);--card:#0f1720;--text:#fff}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif}
+html,body{height:100%;margin:0}
+body{background-image:url("https://wot-lom.com/wp-content/uploads/2025/11/00ecf007352e05bef3621a55574e5e07.webp");background-size:cover;background-position:center;background-attachment:fixed;color:var(--text);display:flex;align-items:flex-start;justify-content:center;padding:20px}
+.wrapper{width:100%;max-width:1200px;backdrop-filter:blur(6px);background:linear-gradient(180deg,rgba(0,0,0,0.35),rgba(0,0,0,0.55));border-radius:12px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+.header{width:100%;height:50px;background-image:url("https://wot-lom.com/wp-content/uploads/2018/12/281gcvm.gif");background-size:contain;background-repeat:repeat-x;background-position:center}
+.header-amount{text-align:right;padding:6px 18px 0 0;font-weight:700;font-size:26px;color:#c97300}
+.container{padding:25px}
+.title{font-size:20px;font-weight:700;margin:0 0 10px}
+.lead{font-size:15px;color:#e8e8e8;margin:0 0 20px;line-height:1.48}
+.row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.card{flex:1 1 300px;min-width:260px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));border-radius:12px;padding:18px;position:relative;box-shadow:0 6px 18px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.04);max-width:560px}
+.card h3{margin:0 0 8px;font-size:16px}
+.card p{margin:0 0 12px;color:#d6d6d6;font-size:14px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#ffb300);color:#0b0b0b;font-weight:700;text-decoration:none;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.45)}
+.small{font-size:13px;color:#cfcfcf}
+.iframe-wrap{display:flex;align-items:center;justify-content:center;padding:8px;background:rgba(255,255,255,0.02);border-radius:10px;width:100%}
+.copy{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);cursor:pointer}
+.footer{padding:18px;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.badge{background:var(--glass);padding:8px 12px;border-radius:999px;font-size:13px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:28px;background:#0b1220;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);display:none;color:#dff0d8}
+.option-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;padding:12px;max-width:340px}
+.option-card img{height:auto;width:auto;max-width:100%;border-radius:10px;display:block;margin:auto}
+.option-card a{color:#ffd000;font-weight:700;text-decoration:none;font-size:15px}
+@media(max-width:640px){.header{height:120px}.row{flex-direction:column}.card{min-width:unset;max-width:100%}.header-amount{text-align:center;padding-right:0}}
+.header-amount{text-align:right;padding:6px 18px 0 0;font-weight:700;font-size:26px;color:#c97300;margin-top:20px}
+.title{font-size:20px;font-weight:700;margin: -30px 0 10px}
+.lead{font-size:15px;color:#e8e8e8;margin: -1px 0 20px;line-height:1.48}
 </style>
 </head>
 <body>
+<div class="wrapper">
+<div class="header" role="img" aria-label="header image"></div>
+<div class="header-amount">Собрано: 0 ₽</div>
 <div class="container">
-<h1>JSON Files Hub</h1>
-<p>Здесь хранятся мои .json файлы. Простое и чистое место без лишнего шума.</p>
-<p><a href="data/example.json" target="_blank">example.json</a></p>
+<h1 class="title">Привет друзья!</h1>
+<p class="lead">Мой монитор скоро окончательно сдуется (встроенный блок питания по ходу подыхает + почти все кнопки не пашут) а без него как без рук. Хочу взять что-то посовременнее (а точнее что-то нормальное/рабочее) но не вытягиваю по деньгам. Если есть желание помочь — буду очень признателен! Любой донат пойдёт в доброе дело и новые проекты! <span style="color: #ffbf00;">По возможности, к донату напишите комментарий, типа "на монитор"</span><br>Всем заранее ОГРОМНОЕ Спасибо !!!</p>
+
+<!-- первый ряд -->
+<div class="row">
+  <div class="card">
+    <h3>ЮMoney</h3>
+    <p class="small">Перейти в ЮMoney. Быстрый платеж через кошелек.</p>
+    <a class="btn" href="https://yoomoney.ru/to/4100118097962662" target="_blank" rel="noopener">Перейти на Yoomoney</a>
+  </div>
+  <div class="card">
+    <h3>Tether (USDT)</h3>
+    <p class="small">Оплата USDT через WebMoney Pay.</p>
+    <a class="btn" href="https://pay.web.money/d/wyce" target="_blank" rel="noopener">Перейти на WebMoney</a>
+  </div>
 </div>
-<footer>© 2025 РобоТТ</footer>
+
+<!-- второй ряд -->
+<div class="row" style="margin-top:10px">
+  <div class="card">
+    <div style="font-weight:700;font-size:16px;color:#fff;margin-bottom:6px">Альфа-Банк / СБП</div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <div style="font-size:15px;color:#fff;white-space:nowrap">2200 1545 4050 2860</div>
+      <button class="copy" data-copy="2200154540502860" title="Копировать номер карты" style="color:#fff;flex-shrink:0"><b>Копировать</b></button>
+    </div>
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.2);margin:14px 0">
+    <div style="font-weight:700;font-size:16px;color:#fff;margin-bottom:6px">Альфа-Банк / СБП</div>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <div style="font-size:15px;color:#fff;white-space:nowrap">СБП +7 989 925 18 66 на имя ANZOR</div>
+      <button class="copy" data-copy="+79899251866" title="Копировать номер для СБП" style="color:#fff;flex-shrink:0"><b>Копировать</b></button>
+    </div>
+  </div>
+
+  <div class="card iframe-wrap">
+    <iframe src="https://funding.web.money/widgets/horizontal/ed2ac5f1-9418-4dfe-85eb-5f9f89104a66?culture=ru-RU&sum=100&bt=0&hs=1&hsb=1&hab=1&hqw=1&hym=1&hmc=1&hbtc=1" width="468" height="150" scrolling="no" style="border:none;border-radius:8px;background:transparent;max-width:100%"></iframe>
+  </div>
+</div>
+
+<!-- третий ряд -->
+<div class="row" style="margin-top:10px">
+  <div class="card option-card">
+    <a href="https://ozon.ru/t/mzjRVEE" target="_blank" rel="noopener"><img src="https://wot-lom.com/wp-content/uploads/2025/11/png-tra1t.png" alt="Вариант 1">
+    Вариант 1</a>
+  </div>
+  <div class="card option-card">
+    <a href="https://ozon.ru/t/zqhl2mK" target="_blank" rel="noopener"><img src="https://wot-lom.com/wp-content/uploads/2025/11/png-tra1t.png" alt="Вариант 2">
+    Вариант 2</a>
+  </div>
+  <div class="card option-card">
+    <a href="https://ozon.ru/t/A0Uzfgg" target="_blank" rel="noopener"><img src="https://wot-lom.com/wp-content/uploads/2025/11/png-tra1t.png" alt="Вариант 3">
+    Вариант 3</a>
+  </div>
+</div>
+
+<div class="footer">
+<div class="badge">Корпорация монстров</div>
+<div class="small">Хотите другой вариант оплаты? Напишите мне.</div>
+</div>
+</div>
+<div class="toast" id="toast">Скопировано в буфер</div>
+<script>
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{navigator.clipboard.writeText(b.dataset.copy).then(showToast)}))
+function showToast(){const t=document.getElementById('toast');t.style.display='block';setTimeout(()=>t.style.display='none',1600)}
+</script>
 </body>
 </html>
